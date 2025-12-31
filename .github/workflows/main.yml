@@ -32,6 +32,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add last_title.txt
-          git commit -m "Update last title" || exit 0
+          # 注意这里改为添加 history.json
+          git add history.json
+          git commit -m "Update history" || exit 0
           git push
